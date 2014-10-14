@@ -33,7 +33,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container bs-docs-container">
 		<div class="row">
 			<div class="col-md-12">
 				<h1 id="bootstrap-section">Glyphicons Complete Reference</h1>
@@ -106,8 +106,8 @@
 			</div>
 
 			<div class="col-md-3">
-				<div class="hidden-print hidden-xs hidden-sm affix-top">
-					<div class="list-group">
+				<div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix">
+					<div class="list-group bs-docs-sidenav">
 					  <a href="#bootstrap-section" class="list-group-item"><h4>Included Halflings <br/><small>Bootstrap 3.2.0</small></h4></a>
 					  <a href="#glyphicons-section" class="list-group-item"><h4>Glyphicons <br/><small>Glyphicons Pro 1.8</small></h4></a>
 					  <a href="#halflings-section" class="list-group-item"><h4>Halflings <br/><small>Glyphicons Pro 1.8</small></h4></a>
@@ -230,6 +230,13 @@
 
 				renderGlyphiconsPro();
 			});
+
+			// dirty side nav active css class hack
+			$('.bs-docs-sidebar .bs-docs-sidenav a').click(function(e){
+				var el = $(e.currentTarget);
+				$('.bs-docs-sidebar .bs-docs-sidenav a').removeClass('active');
+				el.addClass('active');
+			})
 		});
 	</script>
   </body>
