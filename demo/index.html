@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../ref/bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+	  <link href="../dist/css/bootstrap-glyphicons-pro-font-face.css" rel="stylesheet">
+	  <link href="../dist/css/bootstrap-glyphicons-pro.css" rel="stylesheet">
+	<link href="css/demo.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">DEMO bootstrap-glyphicons-pro</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 id="bootstrap-section">Glyphicons Complete Reference</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-9">
+				<div class="row" id="#">
+					<div class="col-md-12">
+						<h3>Included Halflings <br/><small>Bootstrap 3.2.0</small></h3>
+						<div class="bs-glyphicons">
+							<ul class="bs-glyphicons-list" id="bootstrap-target">
+
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="row" id="glyphicons-section"><div class="col-md-12">&nbsp;</div></div>
+				<div class="row"><div class="col-md-12"><hr/></div></div>
+				<div class="row">
+					<div class="col-md-12">
+						<h3>Glyphicons <br/><small>Glyphicons Pro 1.8</small></h3>
+						<div class="bs-glyphicons">
+							<ul class="bs-glyphicons-list" id="glyphicons-target">
+
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="row" id="halflings-section"><div class="col-md-12">&nbsp;</div></div>
+				<div class="row"><div class="col-md-12"><hr/></div></div>
+				<div class="row">
+					<div class="col-md-12">
+						<h3>Halflings <br/><small>Glyphicons Pro 1.8</small></h3>
+						<div class="bs-glyphicons">
+							<ul class="bs-glyphicons-list" id="halflings-target">
+
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="row" id="file-types-section"><div class="col-md-12">&nbsp;</div></div>
+				<div class="row"><div class="col-md-12"><hr/></div></div>
+				<div class="row">
+					<div class="col-md-12">
+						<h3>File Types <br/><small>Glyphicons Pro 1.8</small></h3>
+						<div class="bs-glyphicons">
+							<ul class="bs-glyphicons-list" id="file-types-target">
+
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="row" id="social-section"><div class="col-md-12">&nbsp;</div></div>
+				<div class="row"><div class="col-md-12"><hr/></div></div>
+				<div class="row">
+					<div class="col-md-12">
+						<h3>Social <br/><small>Glyphicons Pro 1.8</small></h3>
+						<div class="bs-glyphicons">
+							<ul class="bs-glyphicons-list" id="social-target">
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="hidden-print hidden-xs hidden-sm affix-top">
+					<div class="list-group">
+					  <a href="#bootstrap-section" class="list-group-item"><h4>Included Halflings <br/><small>Bootstrap 3.2.0</small></h4></a>
+					  <a href="#glyphicons-section" class="list-group-item"><h4>Glyphicons <br/><small>Glyphicons Pro 1.8</small></h4></a>
+					  <a href="#halflings-section" class="list-group-item"><h4>Halflings <br/><small>Glyphicons Pro 1.8</small></h4></a>
+					  <a href="#file-types-section" class="list-group-item"><h4>File Types <br/><small>Glyphicons Pro 1.8</small></h4></a>
+					  <a href="#social-section" class="list-group-item"><h4>Social <br/><small>Glyphicons Pro 1.8</small></h4></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../ref/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+
+	<script>
+		$(function() {
+			var iconSuffixes = {
+				bootstrap: {
+					glyphicons: []
+				},
+				glyphicons: {
+					glyphicons: [],
+					halflings: [],
+					fileTypes: [],
+					social: []
+				}
+			}
+
+			var bootstrapStylesRef = '../ref/bootstrap-3.2.0-dist/css/bootstrap.min.css';
+			var glyphiconsStylesRef = '../dist/css/bootstrap-glyphicons-pro.css';
+
+			var renderBootstrapIcons = function() {
+				var suffixes = iconSuffixes.bootstrap.glyphicons;
+				var target = $('#bootstrap-target');
+
+				suffixes.forEach(function(sfx){
+					target.append($('<li><span class="glyphicon glyphicon-' + sfx + '"></span><span class="glyphicon-class">glyphicon glyphicon-' + sfx + '</span></li>'))
+				});
+			};
+
+
+			var renderGlyphiconsPro = function() {
+				// GLYPHICONS
+				var suffixes = iconSuffixes.glyphicons.glyphicons;
+				var target = $('#glyphicons-target');
+
+				suffixes.forEach(function(sfx){
+					target.append($('<li><span class="glyphicon glyphicon-pro-' + sfx + '"></span><span class="glyphicon-class">glyphicon glyphicon-pro-' + sfx + '</span></li>'))
+				});
+
+
+
+				// HALFLINGS
+				suffixes = iconSuffixes.glyphicons.halflings;
+				target = $('#halflings-target');
+
+				suffixes.forEach(function(sfx){
+					target.append($('<li><span class="glyphicon glyphicon-pro-halflings-' + sfx + '"></span><span class="glyphicon-class">glyphicon glyphicon-pro-halflings-' + sfx + '</span></li>'))
+				});
+
+
+
+				// FILE TYPES
+				suffixes = iconSuffixes.glyphicons.fileTypes;
+				target = $('#file-types-target');
+
+				suffixes.forEach(function(sfx){
+					target.append($('<li><span class="glyphicon glyphicon-pro-file-types-' + sfx + '"></span><span class="glyphicon-class">glyphicon glyphicon-pro-file-types-' + sfx + '</span></li>'))
+				});
+
+
+
+				// SOCIAL
+				suffixes = iconSuffixes.glyphicons.social;
+				target = $('#social-target');
+
+				suffixes.forEach(function(sfx){
+					target.append($('<li><span class="glyphicon glyphicon-pro-social-' + sfx + '"></span><span class="glyphicon-class">glyphicon glyphicon-pro-social-' + sfx + '</span></li>'))
+				});
+			};
+
+			// get bootstrap styles and process suffixes
+			$.get(bootstrapStylesRef, function(data) {
+			    // do your staff here
+				var reIcons = /\.glyphicon-[a-z0-9\-]+/gi;
+				iconSuffixes.bootstrap.glyphicons = (data.match(reIcons) || []).map(function(cssClass) {
+					return cssClass.substring(11, cssClass.length);
+				});
+
+				renderBootstrapIcons();
+			});
+
+			// get glyphicons styles and process suffixes
+			$.get(glyphiconsStylesRef, function(data) {
+				var reGlyphicons = /\.glyphicon-pro(?!-halflings-)(?!-file-types-)(?!-social-)-[a-z0-9\-_]+/gi;
+				var reHalflings = /\.glyphicon-pro-halflings-[a-z0-9\-_]+/gi;
+				var reFileTypes = /\.glyphicon-pro-file-types-[a-z0-9\-_]+/gi;
+				var reSocial = /\.glyphicon-pro-social-[a-z0-9\-_]+/gi;
+
+				iconSuffixes.glyphicons.glyphicons = (data.match(reGlyphicons) || []).map(function(cssClass) {
+					return cssClass.substring(15, cssClass.length);
+				});
+
+				iconSuffixes.glyphicons.halflings = (data.match(reHalflings) || []).map(function(cssClass) {
+					return cssClass.substring(25, cssClass.length);
+				});
+
+				iconSuffixes.glyphicons.fileTypes = (data.match(reFileTypes) || []).map(function(cssClass) {
+					return cssClass.substring(26, cssClass.length);
+				});
+
+				iconSuffixes.glyphicons.social = (data.match(reSocial) || []).map(function(cssClass) {
+					return cssClass.substring(22, cssClass.length);
+				});
+
+				renderGlyphiconsPro();
+			});
+		});
+	</script>
+  </body>
+</html>
