@@ -12,3 +12,7 @@ cache.dep
 .classpath
 .settings/
 .DS_Store
+
+/glyphicons-pro
+
+!/glyphicons-pro/README.md
