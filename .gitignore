@@ -13,6 +13,7 @@ cache.dep
 .settings/
 .DS_Store
 
-/glyphicons-pro
 
-!/glyphicons-pro/README.md
+*/glyphicons-pro/*
+
+!ref/glyphicons-pro/README.md
